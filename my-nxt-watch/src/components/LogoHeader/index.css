@@ -1,0 +1,43 @@
+.logo-conatiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 6%;
+}
+
+.app-logo{
+    width: 100px;
+    height: 30px;
+}
+
+.theme-container{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.theme-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 18px;
+}
+
+.my-profile-image{
+    width: 30px;
+    height: 30px;
+    margin-right: 18px;
+}
+
+.btn{
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    font-size: medium;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    height: 30px;
+    background-color: transparent;
+    font-family: "Roboto";
+}

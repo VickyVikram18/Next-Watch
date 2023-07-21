@@ -1,0 +1,53 @@
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 20%;
+}
+
+.links-container{
+    margin-top: -11px;
+}
+
+.link-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: -10px;
+}
+
+.link-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    color: #7e858e;
+}
+
+.link-heading{
+    color: #7e858e;
+    font-family: "Roboto";
+    font-family: 500;
+    font-size: 20px;
+}
+
+.contact-heading{
+    color: #212121;
+    font-family: "Roboto";
+    font-family: bolder;
+    font-size: 17px;
+}
+
+.footer-content{
+    color: #212121;
+    font-family: "Roboto";
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.social-media-logo{
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}

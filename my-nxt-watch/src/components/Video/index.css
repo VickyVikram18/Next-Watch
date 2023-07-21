@@ -1,0 +1,63 @@
+
+.video-card{
+    width: 32%;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.thumbnail-image{
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.channel-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.profile-image{
+    width: 70px;
+    height: 70px;
+    margin-right: 16px;
+}
+
+.video-title{
+    margin-top: 0px;
+    color: #212121;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.channel-name{
+    color: #212121;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: -5px;
+    margin-bottom: -10px;
+}
+
+.views-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.video-views{
+    color: #616e7c;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+    list-style-type:none ;
+    margin-left: -42px;
+    margin-right: 25px;
+}
+
+.video-posted{
+    color: #616e7c;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+}
