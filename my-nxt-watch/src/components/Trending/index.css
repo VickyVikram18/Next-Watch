@@ -1,0 +1,46 @@
+.route-content-conatiner{
+    overflow-y: scroll;
+    width: 78%;
+}
+
+.route-icon-bar-container{
+    display: flex;
+    align-items: center;
+    background-color: #ebebeb;
+    padding-left: 100px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 26%;
+}
+
+.route-icon-conatiner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.route-icon{
+    margin-right: 30px;
+    width: 90px;
+    height: 90px;
+    padding: 26px;
+    border-radius: 48px;
+    color: #ff0000;
+    background-color: #d7dfe9;
+}
+
+.route-icon-heading{
+    color: #231f20;
+    font-family: "Roboto";
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.trending-videos-conatiner{
+    background-color: #f9f9f9;
+    padding-left: 100px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

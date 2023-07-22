@@ -11,19 +11,19 @@ const Sidebar = () => {
     return(
         <div className="sidebar-container">
             <div className="links-container">
-                <Link className="link-container">
+                <Link to="/" className="link-container">
                     <AiFillHome className="link-icon"/>
                     <h1 className="link-heading">Home</h1>
                 </Link>
-                <Link className="link-container">
+                <Link to="/trending" className="link-container">
                     <HiFire className="link-icon"/>
                     <h1 className="link-heading">Treanding</h1>
                 </Link>
-                <Link className="link-container">
+                <Link to="/gaming" className="link-container">
                     <SiYoutubegaming className="link-icon"/>
                     <h1 className="link-heading">Gaming</h1>
                 </Link>
-                <Link className="link-container">
+                <Link to="/saved-videos" className="link-container">
                     <MdPlaylistAdd className="link-icon"/>
                     <h1 className="link-heading">Saved Videos</h1>
                 </Link>

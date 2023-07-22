@@ -1,0 +1,27 @@
+.gaimg-card-conatiner{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 26px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.gaimg-card-thumbnail{
+    width: 100%;
+}
+
+.gaimg-card-title{
+    color: #231f20;
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.gaimg-card-views{
+    color: #616e7c;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: -10px;
+}

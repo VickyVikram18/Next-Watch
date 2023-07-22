@@ -2,6 +2,7 @@
     background-color: #ebebeb;
     overflow-y: scroll;
     padding: 30px;
+    width: 78%;
 }
 
 .responsive-container{
@@ -73,5 +74,5 @@
     color: #475569;
     font-family: "Roboto";
     font-weight: 500;
-    font-size: 19px;
+    font-size: 17px;
 }

@@ -1,0 +1,57 @@
+.trending-video-card-conatiner{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.trending-video-thumbnail{
+    width: 50%;
+    margin-right: 15px;
+}
+
+.trending-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.trending-video-title{
+    color: #231f20;
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.trending-channel-name{
+    color: #616e7c;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: -4px;
+}
+
+.trending-views-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.trending-video-views{
+    color: #616e7c;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 15px;
+    list-style-type:none ;
+    margin-left: -42px;
+    margin-right: 25px;
+}
+
+.trending-video-posted{
+    color: #616e7c;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 15px;
+}
