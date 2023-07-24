@@ -11,7 +11,7 @@ const Home = () => {
     const [searchInput,setSearchInput] = useState("")
 
     const jwtToken = Cookies.get("jwt_token")
-
+    
     const getHomeVideos = async () => {
         const url = `https://apis.ccbp.in/videos/all?search=${searchInput}`
         const options = {

@@ -1,5 +1,5 @@
 import {useState} from "react"
-import {useNavigate} from "react-router-dom"
+import {Navigate, useNavigate} from "react-router-dom"
 import Cookies from "js-cookie"
 import "./index.css"
 
@@ -24,10 +24,10 @@ const Login = () => {
     }
 
     const displayType = displayPassword? "text" : "password"
+    let jwtToken = Cookies.get("jwt_token")
 
     const submitForm = async (event) => {
         event.preventDefault()
-        console.log("form submitted")
         const url = "https://apis.ccbp.in/login"
         const userDetails = {
             username,password
@@ -39,15 +39,19 @@ const Login = () => {
 
         const response = await fetch(url,options)
         const data = await response.json()
-        console.log(data)
 
         if(response.ok){
-            const jwtToken = data.jwt_token
+            jwtToken = data.jwt_token
             Cookies.set("jwt_token",jwtToken,{expires:30})
             navigate('/')
         }else{
             setErrormsg(data.error_msg)
         }
+    }
+
+    if(jwtToken !== undefined){
+        console.log("Cookies");
+        return <Navigate to="/"/>
     }
 
     return (

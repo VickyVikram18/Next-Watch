@@ -4,16 +4,17 @@ import Login from "./components/Login";
 import VideoItemDetails from "./components/VideoItemDetails"
 import Trending from "./components/Trending";
 import Gaming from "./components/Gaming";
+import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css"
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/videos/:id" element={<VideoItemDetails/>}/>
-      <Route path="/trending" element={<Trending/>}/>
-      <Route path="/gaming" element={<Gaming/>}/>
+      <Route path="/" element={<ProtectedRoute renderComponent={<Home/>}/>} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/videos/:id" element={<ProtectedRoute renderComponent={<VideoItemDetails/>}/>} />
+      <Route path="/trending" element={<ProtectedRoute renderComponent={<Trending/>}/>} />
+      <Route path="/gaming" element={<ProtectedRoute renderComponent={<Gaming/>}/>} />
     </Routes>
   )
 }

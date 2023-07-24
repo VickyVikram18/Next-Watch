@@ -1,31 +1,55 @@
-import {Link} from "react-router-dom"
+import {Link,useLocation} from "react-router-dom"
 import {AiFillHome} from "react-icons/ai"
 import {HiFire} from "react-icons/hi2"
 import {MdPlaylistAdd} from "react-icons/md"
 import {SiYoutubegaming} from "react-icons/si"
 import "./index.css"
 
+const routeConsts = {
+    home : '/',
+    trending : '/trending',
+    gaming : '/gaming',
+    savedVideos : '/saved-videos'
+}
+
 const Sidebar = () => {
-    const hi= "hello"
+    const location= useLocation()
+    const {pathname} = location
+
+    const homeContainerStyle = pathname === routeConsts.home ? 'link-container active-container': 'link-container'
+    const trendingContainerStyle = pathname === routeConsts.trending ? 'link-container active-container': 'link-container'
+    const gamingContainerStyle = pathname === routeConsts.gaming ? 'link-container active-container': 'link-container'
+    const savedVideosContainerStyle = pathname === routeConsts.savedVideos ? 'link-container active-container': 'link-container'
+    
+    const homeIconStyle = pathname === routeConsts.home ? 'link-icon active-icon': 'link-icon'
+    const trendingIconStyle = pathname === routeConsts.trending ? 'link-icon active-icon': 'link-icon'
+    const gamingIconStyle = pathname === routeConsts.gaming ? 'link-icon active-icon': 'link-icon'
+    const savedVideosIconStyle = pathname === routeConsts.savedVideos ? 'link-icon active-icon': 'link-icon'
+    
+    const homeHeadingStyle = pathname === routeConsts.home ? 'link-heading active-heading': 'link-heading'
+    const trendingHeadingStyle = pathname === routeConsts.trending ? 'link-heading active-heading': 'link-heading'
+    const gamingHeadingStyle = pathname === routeConsts.gaming ? 'link-heading active-heading': 'link-heading'
+    const savedVideosHeadingStyle = pathname === routeConsts.savedVideos ? 'link-heading active-heading': 'link-heading'
+    
 
     return(
         <div className="sidebar-container">
             <div className="links-container">
-                <Link to="/" className="link-container">
-                    <AiFillHome className="link-icon"/>
-                    <h1 className="link-heading">Home</h1>
+                <Link to={routeConsts.home} className={homeContainerStyle}>
+                    <AiFillHome className={homeIconStyle}/>
+                    <h1 className={homeHeadingStyle} >Home</h1>
                 </Link>
-                <Link to="/trending" className="link-container">
-                    <HiFire className="link-icon"/>
-                    <h1 className="link-heading">Treanding</h1>
+                <Link to={routeConsts.trending} className={trendingContainerStyle}>
+                    <HiFire className={trendingIconStyle}/>
+                    <h1 className={trendingHeadingStyle}>Trending</h1>
                 </Link>
-                <Link to="/gaming" className="link-container">
-                    <SiYoutubegaming className="link-icon"/>
-                    <h1 className="link-heading">Gaming</h1>
+                <Link to={routeConsts.gaming} className={gamingContainerStyle}>
+                    <SiYoutubegaming className={gamingIconStyle}/>
+                    <h1 className={gamingHeadingStyle}>Gaming</h1>
                 </Link>
-                <Link to="/saved-videos" className="link-container">
-                    <MdPlaylistAdd className="link-icon"/>
-                    <h1 className="link-heading">Saved Videos</h1>
+                <Link to={routeConsts.savedVideos} className={savedVideosContainerStyle}>
+                    <MdPlaylistAdd className={savedVideosIconStyle}/>
+                    <h1 className={savedVideosHeadingStyle}>Saved Videos</h1>
                 </Link>
             </div>
             <div className="contact-container">
