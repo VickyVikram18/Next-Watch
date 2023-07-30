@@ -1,17 +1,24 @@
 .route-content-conatiner{
     overflow-y: scroll;
-    width: 78%;
+    width: 80%;
 }
 
 .route-icon-bar-container{
     display: flex;
     align-items: center;
-    background-color: #ebebeb;
     padding-left: 100px;
     padding-right: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
     height: 26%;
+}
+
+.light-icon-bar-bg{
+    background-color: #ebebeb;
+}
+
+.dark-icon-bar-bg{ 
+    background-color: #0f0f0f;
 }
 
 .route-icon-conatiner{
@@ -27,20 +34,41 @@
     padding: 26px;
     border-radius: 48px;
     color: #ff0000;
+}
+
+.light-route-icon-bg{
     background-color: #d7dfe9;
 }
 
+.dark-route-icon-bg{
+    background-color: #000000;
+}
+
 .route-icon-heading{
-    color: #231f20;
     font-family: "Roboto";
     font-weight: bolder;
     font-size: 40px;
 }
 
+.light-route-icon-heading{
+    color: #231f20;
+}
+
+.dark-route-icon-heading{
+    color: #ffffff;
+}
+
 .trending-videos-conatiner{
-    background-color: #f9f9f9;
     padding-left: 100px;
     padding-right: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.light-trending-videos-bg{
+    background-color: #f9f9f9;
+}
+
+.dark-trending-videos-bg{
+    background-color: #000000;
 }

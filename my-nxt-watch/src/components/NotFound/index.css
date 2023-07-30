@@ -1,0 +1,15 @@
+.not-found-content-conatiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.light-not-found-bg{
+    background-color: #ebebeb;
+}
+
+.dark-not-found-bg{
+    background-color: #000000;
+}

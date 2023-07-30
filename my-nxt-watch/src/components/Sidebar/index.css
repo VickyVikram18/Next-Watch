@@ -4,7 +4,7 @@
     justify-content: space-between;
     height: 100%;
     width: 20%; 
-    margin-right: 10px;
+    margin-right: -10px;
 }
 
 .link-container{
@@ -18,7 +18,7 @@
 .link-icon{
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 20px;
     color: inherit;
     color: #7e858e;
 }
@@ -30,10 +30,16 @@
     font-weight: 600;
 }
 .active-container{
-    background-color: #f1f5f9;
-    border-radius: 3px;
     margin-top: 4px;
     margin-bottom: 4px;
+}
+
+.light-active-container{
+    background-color: #f1f5f9;
+}
+
+.dark-active-container{
+    background-color: #424242;
 }
 
 .active-icon{
@@ -44,15 +50,29 @@
     color: #0f0f0f;
 }
 
+.light-active-heading{
+    color: #0f0f0f;
+}
+
+.dark-active-heading{
+    color: #ffffff;
+}
+
 .contact-heading{
-    color: #212121;
     font-family: "Roboto";
     font-family: bolder;
     font-size: 17px;
 }
 
-.footer-content{
+.light-contact-heading{
     color: #212121;
+}
+
+.dark-contact-heading{
+    color: #ffffff;
+}
+
+.footer-content{
     font-family: "Roboto";
     font-weight: lighter;
     font-size: 14px;

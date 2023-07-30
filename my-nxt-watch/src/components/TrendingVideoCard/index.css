@@ -8,6 +8,7 @@
 
 .trending-video-thumbnail{
     width: 50%;
+    height: 225px;
     margin-right: 15px;
 }
 
@@ -18,10 +19,17 @@
 }
 
 .trending-video-title{
-    color: #231f20;
     font-family: "Roboto";
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
+}
+
+.light-trending-video-title{
+    color: #231f20;
+}
+
+.dark-trending-video-title{
+    color: #f1f5f9;
 }
 
 .trending-channel-name{

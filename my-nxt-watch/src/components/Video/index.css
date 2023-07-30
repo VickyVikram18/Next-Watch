@@ -24,14 +24,21 @@
 
 .video-title{
     margin-top: 0px;
-    color: #212121;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;
 }
 
-.channel-name{
+.light-video-title{
     color: #212121;
+}
+
+.dark-video-title{
+    color: #f1f5f9;
+}
+
+.channel-name{
+    color: #616e7c;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;

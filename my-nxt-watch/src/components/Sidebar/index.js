@@ -3,7 +3,9 @@ import {AiFillHome} from "react-icons/ai"
 import {HiFire} from "react-icons/hi2"
 import {MdPlaylistAdd} from "react-icons/md"
 import {SiYoutubegaming} from "react-icons/si"
+import Context from "../../context/Context"
 import "./index.css"
+import { useContext } from "react"
 
 const routeConsts = {
     home : '/',
@@ -15,21 +17,22 @@ const routeConsts = {
 const Sidebar = () => {
     const location= useLocation()
     const {pathname} = location
+    const {isDark} = useContext(Context)
 
-    const homeContainerStyle = pathname === routeConsts.home ? 'link-container active-container': 'link-container'
-    const trendingContainerStyle = pathname === routeConsts.trending ? 'link-container active-container': 'link-container'
-    const gamingContainerStyle = pathname === routeConsts.gaming ? 'link-container active-container': 'link-container'
-    const savedVideosContainerStyle = pathname === routeConsts.savedVideos ? 'link-container active-container': 'link-container'
+    const homeContainerStyle = pathname === routeConsts.home ? `link-container active-container ${isDark ? "dark-active-container" : "light-active-container"} `: 'link-container'
+    const trendingContainerStyle = pathname === routeConsts.trending ? `link-container active-container ${isDark ? "dark-active-container" : "light-active-container"}`: 'link-container'
+    const gamingContainerStyle = pathname === routeConsts.gaming ? `link-container active-container ${isDark ? "dark-active-container" : "light-active-container"}`: 'link-container'
+    const savedVideosContainerStyle = pathname === routeConsts.savedVideos ? `link-container active-container ${isDark ? "dark-active-container" : "light-active-container"}`: 'link-container'
     
     const homeIconStyle = pathname === routeConsts.home ? 'link-icon active-icon': 'link-icon'
     const trendingIconStyle = pathname === routeConsts.trending ? 'link-icon active-icon': 'link-icon'
     const gamingIconStyle = pathname === routeConsts.gaming ? 'link-icon active-icon': 'link-icon'
     const savedVideosIconStyle = pathname === routeConsts.savedVideos ? 'link-icon active-icon': 'link-icon'
     
-    const homeHeadingStyle = pathname === routeConsts.home ? 'link-heading active-heading': 'link-heading'
-    const trendingHeadingStyle = pathname === routeConsts.trending ? 'link-heading active-heading': 'link-heading'
-    const gamingHeadingStyle = pathname === routeConsts.gaming ? 'link-heading active-heading': 'link-heading'
-    const savedVideosHeadingStyle = pathname === routeConsts.savedVideos ? 'link-heading active-heading': 'link-heading'
+    const homeHeadingStyle = pathname === routeConsts.home ? `link-heading active-heading ${isDark ? "dark-active-heading" : "light-active-heading"}`: 'link-heading'
+    const trendingHeadingStyle = pathname === routeConsts.trending ? `link-heading active-heading ${isDark ? "dark-active-heading" : "light-active-heading"}`: 'link-heading'
+    const gamingHeadingStyle = pathname === routeConsts.gaming ? `link-heading active-heading ${isDark ? "dark-active-heading" : "light-active-heading"}`: 'link-heading'
+    const savedVideosHeadingStyle = pathname === routeConsts.savedVideos ? `link-heading active-heading ${isDark ? "dark-active-heading" : "light-active-heading"}`: 'link-heading'
     
 
     return(
@@ -53,13 +56,13 @@ const Sidebar = () => {
                 </Link>
             </div>
             <div className="contact-container">
-                <h1 className="contact-heading">CONTACT US</h1>
+                <h1 className={isDark ? "contact-heading dark-contact-heading" : "contact-heading light-contact-heading"}>CONTACT US</h1>
                 <div>
                     <img src="https://assets.ccbp.in/frontend/react-js/nxt-watch-facebook-logo-img.png" alt="facebook logo" className="social-media-logo"/>
                     <img src="https://assets.ccbp.in/frontend/react-js/nxt-watch-twitter-logo-img.png" alt="twitter logo" className="social-media-logo"/>
                     <img src="https://assets.ccbp.in/frontend/react-js/nxt-watch-linked-in-logo-img.png" alt="linked in logo" className="social-media-logo"/>
                 </div>
-                <p className="footer-content">Enjoy!Now to see your channels and recommendations!</p>
+                <p className={isDark ? "footer-content dark-contact-heading" : "footer-content light-contact-heading"}>Enjoy!Now to see your channels and recommendations!</p>
             </div>
         </div>
     )

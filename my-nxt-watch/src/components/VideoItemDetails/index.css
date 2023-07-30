@@ -1,8 +1,15 @@
 .video-details-container{
-    background-color: #ebebeb;
     overflow-y: scroll;
     padding: 30px;
     width: 78%;
+}
+
+.light-video-details-bg{
+    background-color: #ebebeb;
+}
+
+.dark-video-details-bg{
+    background-color: #000000;
 }
 
 .responsive-container{
@@ -10,7 +17,6 @@
 }
 
 .video-detail-heading{
-    color: #212121;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 23px;
@@ -26,23 +32,60 @@
 }
 
 .video-detail-likes-container{
-    width: 23%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .like-action-container{
+    width: 33%;
+    text-align: center;
+    border-width: 0px;
+    height: 20px;
     display: flex;
     align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.active-like{
+    color: #2563eb;
+}
+
+.active-dislike{
+    color: #2563eb;
+}
+
+.active-save{
+    color: #64748b;
+}
+
+.active-saved{
+    color: #2563eb;
 }
 
 .like-action-icon{
-    color: #616e7c;
+    color: inherit;
+    width: 20px;
+    height: 20px;
+}
+
+.save-action-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.save-action-text {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 5px;
 }
 
 .like-action-text{
-    color: #616e7c;
+    color: inherit;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;
@@ -51,8 +94,15 @@
 
 .horizontal-ruler{
     height: 2px;
-    background-color:#212121 ;
     margin-bottom: 30px;
+}
+
+.light-ruler{
+     background-color:#212121 ;
+}
+
+.dark-ruler{
+    background-color:#f1f5f9 ;
 }
 
 .video-detail-channel-name{
@@ -75,4 +125,12 @@
     font-family: "Roboto";
     font-weight: 500;
     font-size: 17px;
+}
+
+.light-text{
+    color: #212121;
+}
+
+.dark-text{
+    color: #f1f5f9;
 }

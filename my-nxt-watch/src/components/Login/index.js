@@ -1,6 +1,7 @@
-import {useState} from "react"
+import {useState,useContext} from "react"
 import {Navigate, useNavigate} from "react-router-dom"
 import Cookies from "js-cookie"
+import Context from "../../context/Context"
 import "./index.css"
 
 const Login = () => {
@@ -10,7 +11,8 @@ const Login = () => {
     const [errormsg,setErrormsg] = useState('')
     const [displayPassword,setDisplayPassword] = useState(false)
     const navigate = useNavigate()
-
+    const {isDark} = useContext(Context)
+ 
     const handleUser = (e) => {
         setUserName(e.target.value)
     } 
@@ -55,24 +57,24 @@ const Login = () => {
     }
 
     return (
-        <div className="main-container"> 
-            <div className="login-container">
-                <img src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png" alt="logo" className="logo"/>
+        <div className={ isDark ? "main-container dark-theme" : "main-container light-theme"}> 
+            <div className={isDark ? "login-container dark-login-container" : "login-container light-login-container"}>
+                <img src={isDark ? "https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png" : "https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"} alt="logo" className="logo"/>
                 <form onSubmit={submitForm}>
                     <div className="input-container">
-                        <label htmlFor="userName" className="label">USERNAME</label>
+                        <label htmlFor="userName" className={isDark ? "label dark-label" : "label light-label"}>USERNAME</label>
                         <input type="text" placeholder="Username" id="userName" className="input" onChange={handleUser} value={username}/>
                     </div>
                     <div className="input-container">
-                        <label htmlFor="password" className="label">PASSWORD</label>
+                        <label htmlFor="password" className={isDark ? "label dark-label" : "label light-label"}>PASSWORD</label>
                         <input type={displayType} placeholder="Password" id="password" className="input" onChange={handlePassword} value={password}/>
                     </div>
                     <div className="password-container">
                         <input type="checkBox" id="showPassword" className="checkbox" onChange={handleCheckbox}/>
-                        <label htmlFor="showPassword" className="show">Show Password</label>
+                        <label htmlFor="showPassword" className={isDark ? "show dark-show" : "show light-show"}>Show Password</label>
                     </div>
                     <button type="submit" className="button">Login</button>
-                    {errormsg!== "" && <p>{errormsg}</p>}
+                    {errormsg!== "" && <p className="error-msg">*{errormsg}</p>}
                 </form>
             </div>
         </div>

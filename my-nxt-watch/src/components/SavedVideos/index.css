@@ -1,0 +1,26 @@
+.not-saved-video-conatiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.no-saved-image{
+    width: 40%;
+    align-self: center;
+}
+
+.no-saved-videos-heading{
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 1px;
+}
+
+.no-saved-videos-description{
+    color: #616e7c;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
